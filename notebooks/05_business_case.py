@@ -35,13 +35,13 @@ shap_values = explainer.shap_values(X_test)
 
 joblib.dump(explainer, MODELS_DIR / "shap_explainer.pkl")
 
-# Beeswarm plot — top 15 features
+# Beeswarm plot - top 15 features
 plt.figure(figsize=(10, 7))
 shap.summary_plot(shap_values, X_test,
                   feature_names=feature_names,
                   max_display=15,
                   show=False)
-plt.title("SHAP — Feature Importance Globale")
+plt.title("SHAP - Feature Importance Globale")
 plt.tight_layout()
 plt.savefig("../report/shap_global.png", dpi=150)
 plt.show()
@@ -54,7 +54,7 @@ shap.summary_plot(shap_values, X_test,
                   plot_type="bar",
                   max_display=15,
                   show=False)
-plt.title("SHAP — Mean Absolute Impact")
+plt.title("SHAP - Mean Absolute Impact")
 plt.tight_layout()
 plt.savefig("../report/shap_bar.png", dpi=150)
 plt.show()
@@ -104,11 +104,11 @@ priority_mid  = df_test["RetentionPriority"].quantile(0.40)
 
 def assign_segment(row):
     if row["ChurnProbability"] >= churn_threshold and row["RetentionPriority"] >= priority_high:
-        return "A — High Priority"
+        return "A - High Priority"
     elif row["ChurnProbability"] >= 0.3 or row["RetentionPriority"] >= priority_mid:
-        return "B — Medium Priority"
+        return "B - Medium Priority"
     else:
-        return "C — Low Priority"
+        return "C - Low Priority"
 
 df_test["Segment"] = df_test.apply(assign_segment, axis=1)
 
@@ -121,9 +121,9 @@ print(df_test.groupby("Segment")[TARGET].mean().round(3))
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
 
 # Distribution des segments
-colors = {"A — High Priority": "tomato",
-          "B — Medium Priority": "orange",
-          "C — Low Priority": "steelblue"}
+colors = {"A - High Priority": "tomato",
+          "B - Medium Priority": "orange",
+          "C - Low Priority": "steelblue"}
 
 segment_counts = df_test["Segment"].value_counts()
 axes[0].bar(segment_counts.index, segment_counts.values,
@@ -151,7 +151,7 @@ plt.show()
 
 # %% Business Case & ROI
 avg_monthly_revenue = df_test["MonthlyCharges"].mean()
-segment_a = df_test[df_test["Segment"] == "A — High Priority"]
+segment_a = df_test[df_test["Segment"] == "A - High Priority"]
 
 n_at_risk = len(segment_a)
 revenue_at_risk_monthly = segment_a["MonthlyCharges"].sum()
@@ -181,5 +181,3 @@ df_test.to_csv("../data/df_scored.csv", index=False)
 print("Scored dataset saved → data/df_scored.csv")
 print(f"\nColonnes finales: {list(df_test.columns)}")
 
-
-# %%

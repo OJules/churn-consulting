@@ -46,11 +46,11 @@ def assign_segment(df: pd.DataFrame) -> pd.DataFrame:
 
     def _segment(row):
         if row["ChurnProbability"] >= 0.5 and row["RetentionPriority"] >= p75:
-            return "A — High Priority"
+            return "A - High Priority"
         elif row["ChurnProbability"] >= 0.3 or row["RetentionPriority"] >= p40:
-            return "B — Medium Priority"
+            return "B - Medium Priority"
         else:
-            return "C — Low Priority"
+            return "C - Low Priority"
 
     df["Segment"] = df.apply(_segment, axis=1)
     return df
