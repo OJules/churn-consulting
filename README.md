@@ -1,11 +1,14 @@
-#  Churn Consulting - Customer Churn Prediction & Retention Optimization
+# 🔄 Churn Consulting — Customer Churn Prediction & Retention Optimization
 
 > End-to-end data science project simulating a full consulting deliverable:
 > from EDA to production-ready ML pipeline, CRM segmentation, and business case.
 
+🚀 **Live Demo** : [churn-consulting-njgo.streamlit.app](https://churn-consulting-njgo.streamlit.app)  
+💻 **GitHub** : [github.com/OJules/churn-consulting](https://github.com/OJules/churn-consulting)
+
 ---
 
-##  Key Results
+## 🎯 Key Results
 
 | Metric | Value |
 |---|---|
@@ -19,9 +22,9 @@
 
 ---
 
-##  Business Problem
+## 🧩 Business Problem
 
-Acquiring a new customer costs 5 - 7x more than retaining an existing one.
+Acquiring a new customer costs 5–7x more than retaining an existing one.
 This project answers four business questions:
 
 - Which customers are most likely to churn?
@@ -31,22 +34,22 @@ This project answers four business questions:
 
 ---
 
-##  Dataset
+## 📦 Dataset
 
-**Telcom Customer Churn Dataset** - Kaggle (Mosap Abdel-Ghany)
+**Telcom Customer Churn Dataset** — Kaggle (Mosap Abdel-Ghany)
 - 7,043 customers · 21 features
 - Demographics, contract type, services, billing
 - Binary target: `Churn` (Yes/No)
 
 ---
 
-##  Stack
+## 🛠️ Stack
 
 Python · Polars · Scikit-learn · XGBoost · SHAP · MLflow · Streamlit · Plotly
 
 ---
 
-##  Project Structure
+## 📐 Project Structure
 
 ```
 churn-consulting/
@@ -67,7 +70,7 @@ churn-consulting/
 
 ---
 
-##  Methodology
+## 🔬 Methodology
 
 ### 1. EDA
 - Global churn rate: **26%** → class imbalance identified
@@ -103,7 +106,7 @@ churn-consulting/
 
 ---
 
-##  Run the Dashboard
+## 🚀 Run the Dashboard
 
 ```bash
 pip install -r requirements.txt
@@ -112,25 +115,25 @@ python -m streamlit run app/streamlit_app.py
 
 ---
 
-##  SHAP Feature Importance
+## 📊 SHAP Feature Importance
 
 ![SHAP Global](report/shap_bar.png)
 
 ---
 
-##  Business Insights
+## 💡 Business Insights
 
-1. **Contract type is the strongest churn driver** - month-to-month customers churn at 42% vs 3% on two-year contracts. Priority action: incentivize long-term contract upgrades.
+1. **Contract type is the strongest churn driver** — month-to-month customers churn at 42% vs 3% on two-year contracts. Priority action: incentivize long-term contract upgrades.
 
-2. **Fiber optic is paradoxically high-risk** - 41% churn rate on the premium service. Suggests a pricing or perceived value issue worth investigating.
+2. **Fiber optic is paradoxically high-risk** — 41% churn rate on the premium service. Suggests a pricing or perceived value issue worth investigating.
 
-3. **The first 12 months are critical** - 48% churn rate in year 0, dropping steadily to 2% after year 5. Onboarding and early engagement programs are the highest-leverage intervention.
+3. **The first 12 months are critical** — 48% churn rate in year 0, dropping steadily to 2% after year 5. Onboarding and early engagement programs are the highest-leverage intervention.
 
-4. **Absence of security services signals churn** - customers without OnlineSecurity or TechSupport are significantly more likely to leave. Cross-selling these services reduces churn risk.
+4. **Absence of security services signals churn** — customers without OnlineSecurity or TechSupport are significantly more likely to leave. Cross-selling these services reduces churn risk.
 
 ---
 
-##  Deliverables
+## 📋 Deliverables
 
 | Deliverable | Format | Audience |
 |---|---|---|
@@ -143,7 +146,7 @@ python -m streamlit run app/streamlit_app.py
 
 ---
 
-##  Author
+## 👤 Author
 
 **Jules Géraud Odje**  
-Data Scientist
+Data Scientist · [github.com/OJules](https://github.com/OJules)
