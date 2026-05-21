@@ -1,9 +1,9 @@
 # Data
-data/*.csv
+# data/*.csv
 data/*.xlsx
 
 # Models
-models/*.pkl
+# models/*.pkl
 
 # MLflow
 mlruns/
